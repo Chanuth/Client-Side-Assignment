@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+	<title>
+	Properties
+	</title>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="CSS/prop.css">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script language="JavaScript" type="text/javascript" src = "Jquery.jquery"></script>
+	</head>
+		<body>
+		<Section>
+			<header>
+			<nav class = "main">									<!--Creating a navigation bar -->
+				<a href="Home.html">Silverbell Reality</a> 			<!--Adding the navigation tab -->
+				<a href="#">Sign in</a>								<!--Adding the navigation tab -->
+				<a href="Property.html">View Properties</a>				<!--Adding the navigation tab -->
+			</nav>
+			</header>
+		</section>
+		
+	<div class = "container">
+		<fieldset class = "type">                                       <!-- Creating a fieldset -->
+			<legend>Select a Property Type: </legend>                   <!-- Adding a name to thet fieldset -->
+			<label for="radio-1">Flat</label>
+			<input type="radio" name="radio-1" id="radio-1" value="Flat">           <!-- Creating input radio tags -->
+			<label for="radio-2">House</label>
+			<input type="radio" name="radio-1" id="radio-2" value="House">
+			<label for="radio-3">Any</label>
+			<input type="radio" name="radio-1" id="radio-3" value="Any">
+		</fieldset>
+		
+		<fieldset class = "menu">                                        <!-- Creating a fieldset -->
+			
+			<legend>Select Number of Bedrooms:</legend>                   <!-- Adding a name to the fieldset -->
+				<select name="number" id="menu">      <!-- Creating a menulist -->
+					<option value = "1">1+</option>                         <!-- Adding options to the menu list -->
+					<option value = "2">2+</option>
+					<option value = "3">3+</option>
+					<option value = "Any">Any</option>
+				</select>
+		</fieldset>
+		
+		<fieldset class = "slider">                                     <!-- Creating a fieldset -->
+		<legend>Select Price: </legend>                                 <!-- Adding a name to the fieldset -->
+		<p>
+		<label for="amount">Price range:</label>
+		<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">      <!-- Creating a Slider -->
+		</p>
+ 
+		<div id="slider-range"></div>        <!-- Add UI Slider -->
+		
+		</fieldset>
+		
+		<fieldset class = "dates">                                    <!-- Creating a fieldset -->
+			<legend>Select Year and Month: </legend>
+			<input type="text" id="datepicker">                      <!-- Adding UI Date picker -->
+		</fieldset>
+		
+		<button id = "search" type = "button">Search </button><br>     <!-- Adding a button to search -->
+	</div>
+	
+	<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>                           <!-- Creating a drop button -->
+  <div class="dropdown-content">                                      <!-- Creating a Drop Down Content -->
+						<a href = "properties/prop1.html">Property 1 </a>        <!-- Adding contents to the Drop Down -->
+						<a href = "properties/prop2.html">Property 2 </a>
+						<a href = "properties/prop3.html">Property 3 </a>
+						<a href = "properties/prop4.html">Property 4 </a>
+						<a href = "properties/prop5.html">Property 5 </a>
+						<a href = "properties/prop6.html">Property 6 </a>
+						<a href = "properties/prop7.html">Property 7 </a>
+			  </div>
+		</div>
+	
+<div class = "container1">
+	<br>
+	<br>
+	<br>
+	<br>                          
+		<div class = "box1" data-id ="1">
+			<a href = "properties/prop2.html">         <!-- Adding links to the properties -->
+				<img src = "images/prop2pic1.jpg" alt = "Image of flat">
+				<h3>2 Bedrooms Orington Flat</h3>      <!-- Adding property details -->
+				<h4>299995</h4>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+			</a>
+		</div>
+		
+		<div class = "box2" data-id ="2">
+			<a href = "properties/prop3.html">       <!-- Creating links to the properties -->
+				<img src = "images/prop3pic1.jpg" alt = "Image of flat">
+					<h3>3 Bedrooms Bermingham Flat </h3>           <!-- Adding property details -->
+					<h4>350000</h4>
+						<p>Very Attractive three bedroom semi-detached flat situated within 1 mile of Petts Wood Station with fast trains to London and within easy walking distance of supermarkets, banks, and schools. The property includes living room, dining room and dishwasher & a washing machine and Two bathrooms, One kitchen, Swimmingpool. Additional features include double glazing, gas central heating and a well presented interior...</p>
+					</a>
+				</div>
+				
+		<div class = "box3" data-id ="3">
+			<a href = "properties/prop5.html">                     <!-- Creating links to the properties -->
+				<img src = "images/prop5pic1.jpg" alt = "Image of flat3">
+					<h3>1 Bedroom Flat in London</h3>              <!-- Adding property details -->
+					<h4>475000</h4>
+						<p>Attractive one bedrooms semi-detached couple home situated within 0.1 miles away from Hackney Central, 0.3 miles away from Hackney Downs and 0.3 miles away from Londin Fields. Property features: One beadroom, 4th floor, Balcony, Chain free, EPC Rating = B. Nearest Schools are The Boxing Academy AP Free School, The Urswick School - A Church of England Secondary School, Morningside Primary School.</p>
+				</a>
+			</div>
+		
+		<div class = "box4" data-id ="4">
+			<a href = "properties/prop6.html">                    <!-- Creating links to the properties -->
+				<img src = "images/prop6pic1.jpg" alt = "Image of flat4">
+					<h3>2 Bedrooms Romford Flat</h3>              <!-- Adding property details -->
+					<h4>250000</h4>
+						<p>Attractive two bedrooms semi-detached family home situated within 1.6 miles away from Chadwell Health, 2.1 miles away from Goodmayes station and 2.1 miles away from Fairlop Underground. Property features: Two beadroom, First floor apartment, Kitchen, Private rear garden. Nearest Schools are Rose Lane Primary School, Crownfield infant school, Crownfield junior school.</p>
+					</a>
+				</div>
+		<div class = "box5" data-id ="5">
+		<a href = "properties/prop1.html">                        <!-- Creating links to the properties -->
+			<img src = "images/prop1pic1.jpg" alt = "Picture of home">
+			<h3>3 Bedrooms Petth</h3>                              <!-- Adding property details -->
+			<h4>650000</h4>
+				<p>Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...</p>
+		</a>
+		</div>
+
+		<div class = "box6" data-id ="6">
+		<a href = "properties/prop4.html">                         <!-- Creating links to the properties -->
+			<img src = "images/prop4pic1.jpg" alt = "Picture of home 2">
+			<h3>3 Bedrooms Faringdon House</h3>                    <!-- Adding property details -->
+			<h4>389995</h4>
+			<p>Attractive three bedrooms semi-detached family home situated within 0.2 miles away from Pathfinder Church of England Primary School, 0.4 miles away from Hatton Park Primary School and 0.9 miles away from Northstowe Secondary School. Open-plan kitchen with separate dining room, Main bedroom with an en suite, A further double bedroom and Private driveaway with 2 parking spaces.</p>
+		</a>
+		</div>
+		
+		<div class = "box7" data-id ="7">
+		<a href = "properties/prop7.html">                         <!-- Creating links to the properties -->
+			<img src = "images/prop7pic1.jpg"  alt = "Picture of home 3">
+				<h3>3 Bedrooms The Meadows</h3>                    <!-- Adding property details -->
+				<h4>429995</h4>
+				<p>Attractive three bedrooms semi-detached family home situated within 0.5 miles away from Staplehurst, 2.7 miles away from Marden and 3.2 miles away from Headcorn. Property features: Three beadroom, 2 year customer care warranty, Separate utility room, Open plan kitchen with dining area. Nearest Schools are Staplehurst School, Frittenden Church of England Primary School</p>
+		</a>
+		</div>
+	</div>
+	<aside id="sidebar">
+        <div class="basket">
+			<h2>Property List</h2>
+			<hr>
+			<br>
+			<br>
+            <div class="basket_list">
+                <div class="head">
+                    <span class="name">Property name</span>               <!-- Creating span class -->
+                    <span class="count">Price</span>                      <!-- Creating span class -->
+                </div>
+                <ul>
+				</ul>
+            </div>
+        </div>
+	</aside>
+		<div id = "propertytype"></div>                                  <!-- Adding search details to this tag -->
+		
+		<div class = "favourites">
+		<button type = "button" class = "viewFavourites">View Whish List</button>          <!-- Add button to view Favourite list -->
+		<button type = "button" class = "removeList">Remove Whish List</button>            <!-- Add a button to remove Favourite list -->
+			<div id = "list"></div>                                     <!-- Showing the Favourite list -->
+		</div>
+		</body>
+</html>

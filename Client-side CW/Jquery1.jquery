@@ -1,0 +1,87 @@
+function ukMap() {                               /*Creating map*/                                               
+  // The location of UK
+  const uk = { lat: 51.509865, lng: -0.118092 };              /*Adding longitude and latitude*/
+  // The map, centered at UK
+  const map = new google.maps.Map(document.getElementById("ukmap"), {            /*Showing the map in ukmap id*/
+    zoom: 4,
+    center: uk,
+  });
+  // The marker, positioned at Srilnaka
+  const marker = new google.maps.Marker({                
+    position: uk,
+    map: map,
+  });
+}
+
+$ (function(){
+    $( "#tabs" ).tabs();                           /*Creating the tabs using jquery ui*/
+  });
+
+$(document).ready(function(){                               
+	$("#add").on("click",function(){                       /*on click*/
+	try{
+		$(this).attr('disabled',true);
+		var propIdadd = $(this).closest("p").attr("id");             /*Get the property id*/
+		alert(propIdadd);                                 /*Giving an alert which property you added*/
+		
+		var favouriteprop = JSON.parse(localStorage.getItem("favouriteprop"));           /*Creating local storage key value*/
+			if(favouriteprop == null ){
+				favouriteprop = [];			
+			}
+			
+		favouriteprop.push(propIdadd);                   /*Adding the item to local storage*/
+		
+		localStorage.setItem("favouriteprop",JSON.stringify(favouriteprop));
+		alert("Added to favourites");         /*Giving an alert*/
+
+		}
+
+	catch(e){
+
+		if(e == QUOTA_EXCEEDED_ERR){
+			console.log("Error: Local Storage limit exceeds.")
+		
+			}
+		else{
+			
+			console.log("Error : Saving to local storage")		
+			}
+		
+		}
+
+	});
+});
+
+$(document).ready(function(){
+	$("#remove").on("click",function(){                     /*On click remove the property from local storage*/
+		localStorage.removeItem("favouriteprop");            
+		alert("Favourite List Removed Successfully")
+		});
+		});
+		
+var slideIndex = 1;                                 /*Creating slide show */
+showSlides(slideIndex);
+
+function plusSlides(n) {                            /*display the slide*/
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {                        /*Display the current slide*/
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {                     /*On clck showing the images */
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}

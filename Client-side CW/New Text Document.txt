@@ -1,0 +1,26 @@
+if(userDept == "Flat"){
+			$(".flats").show();
+			$(".houses").hide();
+		}
+		
+		if(userDept == "House"){
+		$(".houses").show();
+			$(".flats").hide();
+		}
+		
+		if(userDept == "Any"){
+			$(".flats").show();
+			$(".houses").show();
+		}
+
+
+
+
+
+
+if(userDept3 == data.properties[i].year){
+							if(userDept4 == data.properties[i].month){
+
+
+}
+		}

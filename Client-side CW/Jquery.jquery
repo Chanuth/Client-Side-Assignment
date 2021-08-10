@@ -1,0 +1,207 @@
+$(function(){                                                        /*Auto correct*/
+	var availableProperties = [      
+		{ value: "prop1", url: 'properties/prop1.html' },               /*Adding values and links to the auto correct*/
+             { value: "prop2", url: 'properties/prop2.html' },
+			 { value: "prop3", url: 'properties/prop3.html' },
+			 { value: "prop4", url: 'properties/prop4.html' },
+			 { value: "prop5", url: 'properties/prop5.html' },
+			 { value: "prop6", url: 'properties/prop6.html' },
+			 { value: "prop7", url: 'properties/prop7.html' }
+	];
+	$("#properties").autocomplete({                               /*Show the auto correct to id*/
+		source: availableProperties,
+		select: function( event, ui ) { 
+            window.location.href = ui.item.url;                  /*Once user press property travel to that page*/
+        }
+		});
+});
+
+$( function() {
+    $( "#datepicker" ).datepicker();                            /*Creating the UI date picker*/
+  } );
+  
+  $( function() {
+    $( ".type input" ).checkboxradio();                         /*Creating the UI radio buttons*/
+  } );
+  
+  $( function() {
+    $( "#menu" ).menu();                                      /*Creating the UI menu*/
+  });
+  
+
+var output="<ul>";                                                    /*Creating an unordered list*/
+	$(document).ready(function(){
+	$.getJSON('properties.json', function(data) {                     /*Getting the data from json file*/
+		$("#search").on("click",function(){                           /*If user click the button this action happens*/
+		$(".container1").hide();                                      /*Hide the container*/
+		var userDept=$(".type input:checked").val();                  /*Getting the radio button values*/
+		var userDept1 = $("#menu").children("option:selected").val(); /*Getting number of bedrooms*/
+		var userDept2 = $('#slider-range').slider("values", 1);       /*Getting slider first value*/
+		var userDept3 = $("#datepicker" ).datepicker('getDate');      /*Getting the date*/
+		var date = userDept3.getDate();                              
+		var year = userDept3.getFullYear();
+		
+		var output="<ul>";
+        for (var i in data.properties) {                                        /*Reading the json file values from for loop*/
+			if((userDept == data.properties[i].type)||(userDept == "Any")){     /*If values are correct display the correct properties*/
+				if((userDept1 == data.properties[i].bedrooms)||(userDept1 == "Any")){
+					if((userDept2 >= data.properties[i].price)||(userDept2 <= data.properties[i].price)){
+						if((date == data.properties[i].added.day)&&(year == data.properties[i].added.year)){
+								output+="<li>" + "<img src='"+ data.properties[i].picture+"'>"+ "<br>"+"<a href='"+ data.properties[i].url+"'>Visit Page</a></li>";
+								/*Here is the output*/
+		}
+		}
+		}
+		}
+}
+        output+="</ul>";
+        document.getElementById("propertytype").innerHTML=output;   /*Setting the output to id*/
+ 
+		});
+	
+	});
+	});
+	
+$(function () {
+
+		// jQuery UI Draggable
+		$(".container1 div").draggable({
+		
+			// brings the property back to its place when dragging is over
+			revert:true,
+		
+			// once the dragging starts, decrease the opactiy of other items
+			// Appending a class with CSS
+			drag:function () {
+				$(this).addClass("active");
+				$(this).closest(".container1").addClass("active");
+			},
+		
+			// removing the CSS classes once dragging is over.
+			stop:function () {
+				$(this).removeClass("active").closest(".container1").removeClass("active");
+			}
+		});
+
+        // jQuery Ui Droppable
+		$(".basket").droppable({
+		
+			// The class that will be appended to the to-be-dropped-element (basket)
+			activeClass:"active",
+		
+			// The class that will be appended once we are hovering the to-be-dropped-element (basket)
+			hoverClass:"hover",
+		
+			// The acceptance of the item once it touches the to-be-dropped-element basket
+			// For different values http://api.jqueryui.com/droppable/#option-tolerance
+			tolerance:"touch",
+			drop:function (event, ui) {
+		
+				var basket = $(this),
+						move = ui.draggable,
+						itemId = basket.find("ul li[ data-id='" + move.attr("data-id") + "']");
+		
+				// If the same property in the basket it will not added to the cart.
+				if (itemId.html() == null) {
+					// Add the dragged item to the basket
+					addBasket(basket, move);
+		
+					// Updating the quantity by +1" rather than adding it to the basket
+					move.find("input").val(parseInt(move.find("input").val()));
+				}
+			}
+		});
+
+        // This function runs onc ean item is added to the basket
+        function addBasket(basket, move) {
+			basket.find("ul").append('<li data-id="' + move.attr("data-id") + '">'
+					+ '<span class="name">' + move.find("h3").html() + '</span>'
+					+ '<span class="count">' + move.find("h4").html() + '</span>'
+					+ '<button class="delete">&#10005;</button>');
+		
+
+
+        // The function that is triggered once delete button is pressed
+        $(".basket ul li button.delete").on("click", function () {
+			$(this).closest("li").remove();
+		});
+		}
+    });
+	
+$(function () {
+
+		// jQuery UI Draggable
+		$(".basket ul").draggable({
+		
+			// once the dragging starts, we decrease the opactiy of other items
+			// Appending a class as we do that with CSS
+			drag:function () {
+				$(this).addClass("active");
+				$(this).closest(".basket").addClass("active");
+			},
+		
+			// removing the CSS classes once dragging is over.
+			stop:function () {
+				$(this).removeClass("active").closest(".basket").removeClass("active");
+				$(this).closest("ul").remove();
+			}
+		});
+		});
+  
+ $( function() {
+    $( "#slider-range" ).slider({                 /*Creating an UI slider*/
+      range: true,
+      min: 0,                                      /*Assigning min value and max value*/
+      max: 650000,
+      values: [ 0, 389995 ],                     /*Assigning limit*/
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+  
+function initMap() {                                  /*Creating the map here*/
+  // The location of Srilanka
+  const srilanka = { lat: 6.93194, lng: 79.84778 };               /*Adding longitude and latitude to the map*/
+  // The map, centered at Sri Lanka
+  const map = new google.maps.Map(document.getElementById("map"), {   
+    zoom: 4,
+    center: srilanka,
+  });
+  // The marker, positioned at Srilnaka
+  const marker = new google.maps.Marker({
+    position: srilanka,
+    map: map,
+  });
+}
+
+$.getJSON('properties.json', function (property) {                       /*Getting the values from json file*/
+            $(function () {
+                $(".viewFavourites").on("click", function () {             /*on button click*/
+					$("#list").show();                                     /*Show the list*/
+                    console.log("Restoring Data");
+                    favoriteprop = JSON.parse(localStorage.getItem("favouriteprop"));
+                    var output = "<ul>";
+                    if (favoriteprop != null) {
+                        for (var i = 0; i < property.properties.length; i++) {
+                            for (var j = 0; j < favoriteprop.length; j++) {
+                                if (favoriteprop[j] == property.properties[i].id) {             /*If local storage data equals to jason file data then display*/
+                                    output += "<li>" + "<img src=" + property.properties[i].picture + ">" + "<button><a href=' " + property.properties[i].url + "'>Visit page</a></button></li>";
+                                /*Here is the output*/
+								}
+                            }
+                        }
+                    }
+                    output += "</ul>";
+                    document.getElementById("list").innerHTML = output;
+                });
+            });
+        });
+		
+$(document).ready(function(){
+	$(".removeList").on("click",function(){               /*on button click remove the properties from the favourite list*/
+		$("#list").empty();
+		});
+		});

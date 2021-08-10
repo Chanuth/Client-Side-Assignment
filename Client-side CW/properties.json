@@ -1,0 +1,115 @@
+{
+	"properties": [
+        {
+            "id":"prop1",
+			"type":"House",
+            "bedrooms":3,
+			"price":650000,
+			"tenure":"Freehold",
+			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+			"location":"Petts Wood Road, Petts Wood, Orpington",
+			"picture":"images/prop1pic1small.jpg",
+			"url":"properties/prop1.html",
+            "added": {
+                "month":"March",
+                "day":12,
+                "year":2018
+            }
+        },
+		{
+            "id":"prop2",
+			"type":"Flat",
+            "bedrooms":2,
+			"price":299995,
+			"tenure":"Freehold",
+			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
+			"location":"Crofton Road Orpington BR6",
+			"picture":"images/prop2pic1small.jpg",
+			"url":"properties/prop2.html",
+            "added": {
+                "month":"September",
+                "day":14,
+                "year":2018
+            }
+        },
+		{
+            "id":"prop3",
+			"type":"Flat",
+            "bedrooms":3,
+			"price":350000,
+			"tenure":"Freehold",
+			"description":"Very Attractive three bedroom semi-detached flat situated within 1 mile of Petts Wood Station with fast trains to London and within easy walking distance of supermarkets, banks, and schools. The property includes living room, dining room and dishwasher & a washing machine and Two bathrooms, One kitchen, Swimmingpool. Additional features include double glazing, gas central heating and a well presented interior...",
+			"location":"Redwood Road Bermingham RB6",
+			"picture":"images/prop3pic1.jpg",
+			"url":"properties/prop3.html",
+            "added": {
+                "month":"Octomber",
+                "day":17,
+                "year":2020
+            }
+        },
+		{
+            "id":"prop4",
+			"type":"House",
+            "bedrooms":3,
+			"price":389995,
+			"tenure":"Freehold",
+			"description":"Attractive three bedrooms semi-detached family home situated within 0.2 miles away from Pathfinder Church of England Primary School, 0.4 miles away from Hatton Park Primary School and 0.9 miles away from Northstowe Secondary School. Open-plan kitchen with separate dining room, Main bedroom with an en suite, A further double bedroom and Private driveaway with 2 parking spaces.",
+			"location":"Plot 64, Faringdon at Northstowe, Cambridgeshire, Pedersen Way, Cambridge CB24",
+			"picture":"images/prop4pic1.jpg",
+			"url":"properties/prop4.html",
+            "added": {
+                "month":"December",
+                "day":17,
+                "year":2020
+            }
+        },
+		{
+            "id":"prop5",
+			"type":"Flat",
+            "bedrooms":1,
+			"price":475000,
+			"tenure":"Leasehold",
+			"description":"Attractive one bedrooms semi-detached couple home situated within 0.1 miles away from Hackney Central, 0.3 miles away from Hackney Downs and 0.3 miles away from Londin Fields. Property features: One beadroom, 4th floor, Balcony, Chain free, EPC Rating = B. Nearest Schools are The Boxing Academy AP Free School, The Urswick School - A Church of England Secondary School, Morningside Primary School. ",
+			"location":"Sylvester Path, Hackney, London, E8",
+			"picture":"images/prop5pic1.jpg",
+			"url":"properties/prop5.html",
+            "added": {
+                "month":"December",
+                "day":18,
+                "year":2020
+            }
+        },
+		{
+            "id":"prop6",
+			"type":"Flat",
+            "bedrooms": 2,
+			"price":250000,
+			"tenure":"Freehold",
+			"description":"Attractive two bedrooms semi-detached family home situated within 1.6 miles away from Chadwell Health, 2.1 miles away from Goodmayes station and 2.1 miles away from Fairlop Underground. Property features: Two beadroom, First floor apartment, Kitchen, Private rear garden. Nearest Schools are Rose Lane Primary School, Crownfield infant school, Crownfield junior school.",
+			"location":"Billet Road, Romford",
+			"picture":"images/prop6pic1.jpg",
+			"url":"properties/prop6.html",
+            "added": {
+                "month":"December",
+                "day":18,
+                "year":2020
+            }
+        },
+		{
+            "id":"prop7",
+			"type":"House",
+            "bedrooms":3,
+			"price":429995,
+			"tenure":"Freehold",
+			"description":"Attractive three bedrooms semi-detached family home situated within 0.5 miles away from Staplehurst, 2.7 miles away from Marden and 3.2 miles away from Headcorn. Property features: Three beadroom, 2 year customer care warranty, Separate utility room, Open plan kitchen with dining area. Nearest Schools are Staplehurst School, Frittenden Church of England Primary School ",
+			"location":"lot The Spruce 058, The Spruce at The Meadows, The Meadows, Headcorn Road, Staplehurst TN12",
+			"picture":"images/prop7pic1.jpg",
+			"url":"properties/prop7.html",
+            "added": {
+                "month":"December",
+                "day":18,
+                "year":2020
+            }
+        }
+]}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+	<html lang = "en">
+		<head>
+				<title>
+					Property 6
+				</title>
+			<meta charset = "UTF-8">
+			<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" type="text/css" href="../CSS/allproperties.css">
+			<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDnzBU9bAVNZerEUwaTlfK8_tjGSgp1c0&callback=ukMap"></script>
+			<script language="JavaScript" type="text/javascript" src = "../Jquery1.jquery"></script>
+  </head>
+		
+	<body>
+		<Section>
+			<header>
+			<nav class = "main">									<!--Creating a navigation bar -->
+				<a href="../Home.html">Silverbell Reality</a> 			<!--Adding the navigation tab -->
+				<a href="#">Sign in</a>								<!--Adding the navigation tab -->
+				<a href="../Property.html" class = "menu1">View Properties</a>				<!--Adding the navigation tab -->
+			</nav>
+			</header>
+		</section>
+			<div class="dropdown">                                       <!-- Creating a drop down button -->
+  <button class="dropbtn">Dropdown</button>                              <!-- Creating a drop downcontent -->
+  <div class="dropdown-content">
+						<a href = "prop1.html">Property 1 </a>
+						<a href = "prop2.html">Property 2 </a>          <!-- Adding contents -->
+						<a href = "prop3.html">Property 3 </a>
+						<a href = "prop4.html">Property 4 </a>
+						<a href = "prop5.html">Property 5 </a>
+						<a href = "prop6.html">Property 6 </a>
+						<a href = "prop7.html">Property 7 </a>
+			  </div>
+		</div>
+		
+		<div class="slideshow-container">                               <!-- Adding a div tag to create a slide show -->
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="../images/prop6pic1.jpg" alt = "images">                                 <!-- Adding images to the slide show -->
+	</div>
+
+  <div class="mySlides fade">
+    <img src="../images/prop6pic2.jpg" alt = "images">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="../images/prop6pic3.jpg" alt = "images">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="../images/prop6pic4.jpg" alt = "images">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="../images/prop6pic5.jpg" alt = "images">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="../images/prop6pic6.jpg" alt = "images">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="../images/prop6pic7.jpg" alt = "images">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="../images/prop1Plan.jpg" alt = "images">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>                              <!-- Creating a button to view images by sliding -->
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>                           <!-- Adding on click event to show images -->
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+			
+			<div class = "details">                                                <!-- Adding property details -->
+				<br>
+				<br>
+				<br>
+			<div class = "price">
+				<label value = "475000">$ 475000</label>
+			</div>
+			</div>
+			
+			<div class = "description">
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Description</a></li>
+					<li><a href="#tabs-2">Plan</a></li>
+					<li><a href="#tabs-3">Location</a></li>
+				</ul>
+			<div id="tabs-1">
+				<p id = "prop6"> Attractive two bedrooms semi-detached family home situated within 1.6 miles away from Chadwell Health, 2.1 miles away from Goodmayes station and 2.1 miles away from Fairlop Underground. Property features: Two beadroom, First floor apartment, Kitchen, Private rear garden. Nearest Schools are Rose Lane Primary School, Crownfield infant school, Crownfield junior school. 
+				<button type = "button"id = "add"> Add to Wishlist </button>
+				<button type = "button" id = "remove"> Remove from Wishlist </button>
+				<button type = "button" class = "buy"> Buy </button>
+				</p> </div>
+					<div id="tabs-2">
+						<img src = "../images/prop1Plan.jpg" alt = "images"> </div>
+					<div id="tabs-3">
+						<div id="ukmap"></div> 
+					</div>
+			</div>	
+		</div>
+			<div class = "table">
+				<table>
+					<tr><th>Type</th> <td> Flat </td>
+					<tr><th>Tenure</th> <td>Freehold</td>
+					<tr><th>Bedrooms</th> <td>2</td>
+					<tr><th>Location</th> <td>Billet Road, Romford</td>
+				</table>
+			</div>
+		<footer>
+				<section class = "footer">
+				<h4 id = "stay"> Follow us on </h4><br>
+				<a href="#" class="fa fa-facebook"></a> 
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-google"></a>
+				<a href="#" class="fa fa-linkedin"></a>
+				<a href="#" class="fa fa-instagram"></a>
+				</section>
+</footer>			
+	</body>
+	</html>
